@@ -291,24 +291,22 @@ service_key = json_param["service_key"]
 
 """
 
-
 api_nm = "측정소별실시간측정정보"
 url = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty"
 params ='{"numOfRows": "100", "pageNo": "1" ,"stationName":":stationName", "dataTerm" : "DAILY" , "ver" : "1.3"}'
 output_field = "dataTime,mangName,so2Value,coValue,o3Value,no2Value,pm10Value,pm10Value24,pm25Value,pm25Value24,khaiValue,khaiGrade,so2Grade,coGrade,o3Grade,no2Grade,pm10Grade,pm25Grade,pm10Grade1h,pm25Grade1h"
 s3path = "svdata/대기오염/$MONTH/측정소별실시간측정정보.csv"
 pre_api = '{"pre_api_url":"http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getMsrstnList","pre_params":{"numOfRows":"200","pageNo":"1","addr":"서울,부산,대구,인천,광주,대전,울산,경기,강원,충북,충남,전북,전남,경북,경남,제주,세종"},"ext_field_list":"stationName","join_field":{"stationName":":stationName"} }'
-
 params_delimeter =","
 output_dtype = "csv"  
 input_dtype =  "xml" 
 intput_to_header_flag = "1" 
 api_check_to_lower_flag = "1"
 timeout = "15"
-access_key = "AKIA37VP3AHDESJA7APP"
-secret_key = "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"
-bucket = "refined-public-raw-d-curation"
-service_key = "oy3Nj2m9brFR15sOHqn1leDE08vnoJh9Vm7wAa46%2B18tSqbnCVpYZmC3POcWN8XfUEls4qFuX6trbppj7GMBBw%3D%3D"
+access_key = ""
+secret_key = ""
+bucket = ""
+service_key = ""
 upload_yn = "N"
 
 
